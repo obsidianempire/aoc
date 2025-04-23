@@ -1,27 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Obsidian Empire | Guild Charter</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-    <div id="navbar"></div>
-    <script>
-        fetch('navbar.html')
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById('navbar').innerHTML = html;
-        });
-    </script>    
-  <header>
-    <img src="assets/logo.png" alt="Obsidian Empire Logo" class="logo" />
-    <h1>Guild Charter</h1>
-    <p class="tagline">Forged in flame, bound by shadow, eternal in unity.</p>
-  </header>
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Navbar from "../components/Navbar.astro";
+---
+<BaseLayout>
+  <Navbar />
+  <main style="padding: 4rem 2rem; max-width: 800px; margin: auto; text-align: left;">
 
-  <main class="charter">
     Welcome to the official doctrine of the Obsidian Empire, forged to guide our path through strife, shadow, and sovereignty.
     <section>
       <h2>👑 Emperor of Obsidian</h2>
@@ -114,10 +98,5 @@
     </section>
   
 
-        
-
-  <footer>
-    <p>&copy; 2025 Obsidian Empire. All rights reserved.</p>
-  </footer>
-</body>
-</html>
+  </main>
+</BaseLayout>
